@@ -1,0 +1,111 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="gallery_filter.css">
+
+</head>
+
+<body class="body">
+  <nav> 
+    <a href="register.html"> register page</a> 
+    &nbsp;
+    <a href="final-project.html"> HomePage</a>
+    &nbsp;
+    <a href="page-2.html"> Portfolio </a>
+    &nbsp;
+    <a href="page-3.html"> Certificates and achievements </a>
+    &nbsp;
+    <a href="gallery_fillter_fix.html"> Gallery Filter </a>
+    &nbsp;
+  
+  
+  
+  </nav>
+  <h1 class="h1">=========== GALLERY FILTER ===========</h1>
+
+  <div class="BUTTON">
+    <button class="filter-btn active" data-category="all"> Show all</button>
+    <button class="filter-btn" data-category= "art"> Art</button>
+    <button class="filter-btn" data-category = "console"> console</button>
+    <button class="filter-btn" data-category = "nature"> nature</button>
+
+
+  </div>
+
+  <div class="gallery">
+        <div class="gallery-item art">
+            <img src="art1.jpg" alt="Art" style="width:400px">
+            <h4> sky painting </h4>
+        </div>
+      
+
+        <div class="gallery-item art">
+            <img src="art2.jpg" alt="Art" style="width:400px">
+            <h4> sunset painting </h4>
+        </div>
+
+        <div class="gallery-item nature">
+            <img src="nature1.jpg" alt="nature" style="width:400px">
+            <h4> Mountains </h4>
+        </div>
+
+        <div class="gallery-item nature">
+            <img src="nature2.jpg" alt="nature" style="width:400px">
+            <h4> Field </h4>
+        </div>
+
+        <div class="gallery-item nature">
+            <img src="nature3.jpg" alt="nature" style="width:400px">
+            <h4> Field 2 </h4>
+        </div>
+
+
+        <div class="gallery-item console">
+            <img src="3ds.jpg" alt="Game Console" style="width: 400px">
+            <h4>Nintendo 3ds</h4>
+        </div>
+
+        <div class="gallery-item console">
+            <img src="steamdeck.jpg" alt="Game Console" style="width:400px">
+            <h4>steamdeck</h4>
+        </div>
+
+        <div class="gallery-item art">
+            <img src="art4.jpg" alt="Art" style="width:400px">
+            <h4> Kirby </h4>
+        </div>
+
+        <div class="gallery-item console">
+            <img src="gameboy.jpg" alt="Game Console" style="width: 400px;">
+            <h4>gameboy</h4>
+        </div>
+
+  </div>
+  
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.filter-btn').click(function() {
+          var category = $(this).data('category');
+          filterImages(category);
+        });
+  
+        function filterImages(category) {
+          if (category === 'all') {
+            $('.gallery-item').show();
+          } else {
+            $('.gallery-item').hide();
+            $('.' + category).show();
+          }
+        }
+      });
+    </script>
+</body>
+
+<h1 style="background-color: #FFCACA; font-family: Arial, Helvetica, sans-serif; color: white"> 
+  ------- Click here to go to back : <a href="page-3.html"> Certificates And Achievements</a> </a> ------- 
+
+</h1>
+
+
+</html>
